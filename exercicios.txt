@@ -1,0 +1,144 @@
+Se você quer que seu repositório no GitHub chame a atenção de verdade e mostre que você joga no nível profissional, os seus exercícios precisam simular problemas reais de arquitetura, manipulação de dados e regras de negócio.
+
+Para te ajudar a construir uma base lógica brutal, dividi os 50 exercícios em 5 blocos estratégicos de Backend. Em vez de fazer 50 arquivos isolados, a minha dica de ouro é: crie um único repositório no GitHub chamado algo como backend-logic-challenges e organize-o em pacotes/módulos. Use Type Hinting, trate exceções, siga a PEP 8 e escreva testes unitários se puder. Isso sim vai fazer o olho do recrutador brilhar.
+
+Pegue o café e vamos ao trabalho!
+
+Bloco 1: Estruturas de Dados Puras e Algoritmos de Core Engine
+O objetivo aqui é mostrar que você entende o que acontece por baixo dos panos dos frameworks e sabe manipular dados sem depender de bibliotecas externas.
+
+Validador de CPF/CNPJ Profissional: Crie uma função que receba uma string, remova caracteres especiais, identifique se é CPF ou CNPJ e aplique o algoritmo de cálculo dos dígitos verificadores.
+
+Gerador de Payload de Pagamento (String de Pix Copia e Cola): Implemente a lógica para gerar a string EMV do Pix estático (padrão BCB), calculando o CRC16 (Cyclic Redundancy Check) no final do payload.
+
+Conversor de Notação Polonesa Inversa (RPN): Implemente uma calculadora baseada em pilha (Stack) que resolva expressões matemáticas em formato RPN (ex: ["2", "1", "+", "3", "*"] -> 9).
+
+Filtro Avançado de Logs com Busca Binária: Dado um arquivo de log textual gigante (mockado em memória), ordene-o por timestamp e implemente uma busca binária para encontrar eventos ocorridos em um intervalo exato de milissegundos.
+
+Algoritmo de Rate Limiting (Token Bucket): Implemente em Python puro a lógica do algoritmo Token Bucket para controlar o limite de requisições por IP (ex: 5 requisições por minuto).
+
+Diferença entre JSONs (Deep Diff): Escreva uma função recursiva que receba dois dicionários Python aninhados e retorne exatamente quais chaves foram adicionadas, modificadas (com valor antigo e novo) ou removidas.
+
+Paginador de Resultados Manual: Crie uma classe utilitária que receba uma lista de dados, o número da página atual e o limite por página. Ela deve retornar o subconjunto de dados, o total de páginas, e se há uma página anterior/próxima.
+
+Validador de Expressões Sintáticas (Parênteses/Chaves/Colchetes): Usando uma estrutura de dados de pilha, valide se uma string de código possui fechamento correto de símbolos: {[()]} é válido; {[(])} é inválido.
+
+Sistemas de Permissões (Bitwise Masks): Crie um sistema de controle de acesso (RBAC) usando operadores bitwise (&, |). Defina permissões como READ=1, WRITE=2, DELETE=4, ADMIN=8 e valide acessos do usuário.
+
+Gerador e Validador de Cupom de Desconto com Hash Checksum: Escreva um algoritmo que gere códigos de cupom (ex: DESC10-X8Y2) onde os últimos caracteres são um algoritmo de verificação (checksum) dos primeiros, evitando fraudes de cupons inventados.
+
+Bloco 2: Regras de Negócio e Engenharia de Software Backend
+Exercícios que simulam o dia a dia de um desenvolvedor escrevendo as regras de sistemas corporativos.
+
+Cálculo de Juros Compostos e Amortização (Tabela SAC e Price): Crie um motor financeiro que receba o valor de um empréstimo, taxa de juros e prazo, retornando a tabela completa de parcelas, amortização, juros e saldo devedor.
+
+Motor de Checkout com Descontos Cumulativos: Escreva o backend de um carrinho de compras. Aplique regras como: "Leve 3 Pague 2", "10% de desconto em eletrônicos" e "Desconto progressivo se o valor passar de R$500".
+
+Agendador de Consultas sem Sobreposição: Crie uma função que receba uma lista de agendamentos existentes (com horario_inicio e horario_fim) e valide se uma nova tentativa de agendamento colide com algum horário ocupado.
+
+Motor de Matchmaking de Vagas de Emprego: Dado um perfil de candidato (competências, pretensão salarial, modelo de trabalho) e uma lista de vagas, calcule uma pontuação de compatibilidade (score de 0 a 100) para cada vaga.
+
+Conversor de Moedas com Histórico de Cotações: Crie uma classe que receba uma tabela de cotações diárias. Implemente a lógica para converter valores entre múltiplas moedas escolhendo a melhor cotação de uma data específica.
+
+Validador de Senhas Fortes com Explicação de Falhas: Escreva um validador que use RegEx e validações lógicas para checar se a senha possui tamanho mínimo, maiúsculas, minúsculas, números, caracteres especiais e se não é uma sequência óbvia (ex: 123456). Retorne uma lista com todas as falhas encontradas.
+
+Cálculo de Frete Baseado em Cubagem e Distância: Implemente uma função que receba as dimensões de um pacote (A x L x P), peso real, e distância de entrega. Calcule o peso cubado e aplique a tarifa de frete correta com base nas regras dos Correios.
+
+Pipeline de Processamento de Cadastro (Sanitização de Dados): Crie um pipeline onde um dicionário de input de usuário "sujo" (espaços extras, caps lock bagunçado, telefones sem formatação) passa por etapas sequenciais de limpeza até ficar pronto para o banco de dados.
+
+Sistema de Pontuação de Fidelidade (Fidelidade/Milhas): Desenvolva a lógica que calcula quantos pontos um usuário ganha por compra, considerando categorias de usuário (Bronze, Prata, Ouro) e multiplicadores de campanhas ativas.
+
+Gerenciador de Status de Pedido (State Pattern Manual): Crie o fluxo de um pedido: Aguardando Pagamento -> Pago -> Enviado -> Entregue. Impeça por código que um pedido mude de Aguardando Pagamento direto para Entregue.
+
+Bloco 3: Arquivos, Parsers e Persistência de Dados (Simulação de Bancos)
+Processar arquivos e armazenar informações é o core do backend. Mostre que você domina I/O (Input/Output).
+
+Parser Manual de CSV para Lista de Dicionários: Sem usar a biblioteca csv do Python, abra um arquivo .csv via código, trate quebras de linha, delimitadores (vírgula ou ponto e vírgula) e aspas, transformando-o em dados estruturados.
+
+Banco de Dados Key-Value Baseado em Arquivo Textual: Crie uma classe que simule um Redis simplificado. Ela deve salvar dados em formato chave=valor em um arquivo .txt, permitindo métodos como set(key, value), get(key) e delete(key).
+
+Conversor de XML de Nota Fiscal (NF-e) para JSON: Crie um parser que leia um arquivo XML mockado de uma Nota Fiscal Eletrônica e extraia campos específicos (CNPJ emitente, valor total, itens do pedido) salvando em um arquivo .json.
+
+Sistema de Migrations Manual: Imagine que você tem um arquivo JSON que atua como banco de dados. Crie um script de "migration" que varra esse arquivo alterando a estrutura de todos os registros antigos (ex: mudar o campo nome_completo para nome e sobrenome).
+
+Compactador e Descompactador de Texto (Run-Length Encoding): Implemente o algoritmo RLE que compacta strings repetidas (ex: AAAAABBBCC vira 5A3B2C) e escreva a lógica inversa para ler o arquivo compactado.
+
+Gerenciador de Configurações .env Customizado: Escreva seu próprio leitor de arquivos de configuração .env. O script deve ler o arquivo linha por linha, ignorar comentários (#), tratar espaçamentos e injetar as variáveis no dicionário os.environ do Python.
+
+Exportador de Relatórios em Formato Markdown: Crie um script que receba uma lista de objetos/dicionários de vendas de uma empresa e gere um arquivo .md perfeitamente formatado com tabelas, títulos e sumários de totais.
+
+Sistema de Auditoria de Arquivos (Histórico de Alterações): Crie um mecanismo onde, sempre que um arquivo JSON de dados for alterado pelo seu sistema, uma cópia ou um log do estado anterior seja gerado em uma pasta de logs/auditoria.
+
+Validador de Schema de JSON: Escreva uma função que compare um JSON recebido com um "schema" pré-definido em código (checando tipos de dados, campos obrigatórios e valores máximos/mínimos) sem usar bibliotecas prontas.
+
+Rotacionador Automático de Arquivos de Log: Crie uma função de log que escreve mensagens em um arquivo app.log. Quando o arquivo atingir 1MB, o script deve renomeá-lo para app.1.log e abrir um novo app.log vazio.
+
+Bloco 4: Concorrência, Assincronismo e Redes (Simulações)
+O mercado exige que você saiba lidar com tarefas que rodam em paralelo ou esperas de rede.
+
+Simulador de Pooling de Conexões de Banco de Dados: Crie uma classe que gerencie um número limitado de conexões simuladas (ex: 5 conexões). Implemente métodos para "adquirir" uma conexão e "liberar" de volta para o pool. Se não houver conexões livres, lance uma exceção de timeout.
+
+Fila de Mensagens Assíncronas (In-Memory Message Broker): Usando o módulo queue ou asyncio do Python, implemente um sistema de mensageria estilo Producer-Consumer, onde múltiplos produtores inserem tarefas e múltiplos workers as processam em paralelo.
+
+Simulador de Requisições HTTP com Retentativas (Retry Logic com Exponential Backoff): Escreva uma função que simule a chamada a uma API externa. Se a chamada falhar (simule falhas randômicas), o script deve tentar novamente esperando 2s, depois 4s, depois 8s antes de desistir.
+
+Agrupador de Requisições (Batch Processing): Crie um buffer de processamento. O sistema deve acumular registros individuais enviados a ele e só processá-los em lote ("batch") quando atingir 10 itens ou se passarem 5 segundos desde o último lote.
+
+Circuit Breaker Pattern: Implemente a lógica de um disjuntor de circuito para chamadas de API. Se ocorrerem 3 falhas seguidas, o circuito abre e bloqueia novas chamadas por 10 segundos, retornando um erro imediato para proteger o sistema.
+
+Parser de Query Strings de URL: Dada uma URL completa (ex: https://api.com/v1/users?limit=10&sort=desc&tags=python,backend), extraia manualmente todos os parâmetros de busca para um dicionário Python tipado.
+
+Simulador de Upload de Arquivos em Pedaços (Multipart Upload): Escreva a lógica backend que receberia um arquivo grande dividido em 5 partes, valide a ordem de cada parte através de índices, e faça o "merge" final remontando o arquivo original com segurança.
+
+Cache In-Memory com Expiração (TTL - Time to Live): Implemente um dicionário de cache onde cada chave armazenada tem um tempo de vida (ex: 30 segundos). Se o sistema tentar ler a chave após esse tempo, o valor deve ser deletado e retornar None.
+
+Validador de Cabeçalhos HTTP de Segurança: Crie uma função que receba um dicionário simulando cabeçalhos de resposta HTTP e valide se boas práticas de segurança como X-Frame-Options, Content-Security-Policy e Strict-Transport-Security estão presentes e configuradas corretamente.
+
+Processador Paralelo de Imagens (Mockado): Usando concurrent.futures, simule o processamento (redimensionamento/filtro) de uma lista de 100 imagens fictícias dividindo o trabalho entre múltiplos cores do processador para otimizar o tempo de execução.
+
+Bloco 5: Desafios Avançados de Arquitetura e Engenharia Reversa
+Se você resolver estes, você prova que pensa como um engenheiro de software pleno.
+
+Motor de Busca Textual Simples (Inverted Index): Dada uma coleção de frases/documentos textuais, construa um índice invertido. O usuário deve conseguir buscar por uma palavra e o sistema retornar instantaneamente quais documentos contêm essa palavra, ordenados por relevância (frequência).
+
+Interpretador de Máquina de Estado para Workflow: Crie um motor genérico que receba uma configuração em dicionário definindo estados, transições permitidas e ações. O motor deve validar e executar transições de um fluxo (ex: aprovação de faturamento de contratos).
+
+Gerenciador de Dependências de Tarefas (Grafo/DAG): Dadas várias tarefas onde algumas dependem do término de outras (ex: "Tarefa B depende da Tarefa A"), implemente um algoritmo de ordenação topológica para definir a ordem exata de execução que evite travamentos (deadlocks).
+
+Implementação Manual de Criptografia Baseada em Cifra de Chave Alternada: Crie seu próprio algoritmo de criptografia e descriptografia de strings trocando caracteres com base em uma chave numérica fornecida pelo usuário.
+
+Simulador de Blockchain (Bloco e Hash): Crie uma estrutura onde cada "Bloco" possui um índice, timestamp, dados, o hash do bloco anterior e o seu próprio hash calculado via hashlib. Mostre como a alteração de um dado antigo quebra a cadeia de hashes.
+
+Alocador Dinâmico de Recursos de Servidor (Knapsack Problem adaptado): Você tem servidores com limites de memória e CPU e uma lista de microsserviços para implantar, cada um exigindo uma cota. Escreva o algoritmo que maximize o número de serviços alocados sem estourar os limites.
+
+Sintetizador de Histórico de Saldo de Conta Corrente: Dado o saldo atual de um cliente e uma lista consolidada de transações de depósito e saque desordenadas no tempo, ordene as transações e reconstrua o extrato bancário mostrando o "saldo diário" retroativo de cada dia.
+
+Engine de Validação Dinâmica por Regras Textuais: Crie um interpretador que receba uma regra em formato string (ex: "idade > 18 AND estado == 'SP'") e um dicionário de dados do usuário, avaliando programaticamente se o usuário passa na regra.
+
+Desfazedor de Operações (Undo/Redo System): Implemente o Command Pattern para criar um editor de texto via terminal simplificado. Cada ação de inserção ou deleção de texto deve poder ser desfeita (undo) ou refeita (redo) usando duas pilhas de controle.
+
+Sistema de Rotas e Matcher de URL (Mock Framework): Crie o core de um framework web (estilo Flask/Django). Você deve conseguir registrar rotas com parâmetros dinâmicos (ex: /usuarios/<int:id>/detalhes) e criar uma função que receba uma URL acessada e descubra qual função deve ser executada, extraindo o parâmetro id convertido para inteiro.
+
+💡 Dica extra de como apresentar isso no GitHub:
+Para cada desafio que resolver, estruture o código assim:
+
+Python
+# bloco1/desafio01_validador_cpf.py
+
+def clean_document_string(doc: str) -> str:
+    """Remove caracteres especiais de uma string de documento."""
+    pass
+
+def validate_cpf(cpf: str) -> bool:
+    """
+    Aplica as regras algorítmicas do Ministério da Fazenda para validação de CPF.
+    Retorna True se válido, False caso contrário.
+    """
+    # Sua lógica Pythônica e limpa aqui
+    pass
+
+if __name__ == "__main__":
+    # Sempre inclua casos de teste funcionais demonstrando o código rodando
+    assert validate_cpf("111.222.333-44") is False
+    print("Desafio 01: Todos os testes passaram!")
+Fazer commits claros seguindo o padrão de Conventional Commits (ex: feat(bloco-1): adiciona validador de cpf com checksum) vai consolidar de vez a imagem de que você é o profissional que o mercado procura. Boa sorte nos estudos e mande ver no código!
