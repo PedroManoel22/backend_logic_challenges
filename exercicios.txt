@@ -1,8 +1,3 @@
-Se você quer que seu repositório no GitHub chame a atenção de verdade e mostre que você joga no nível profissional, os seus exercícios precisam simular problemas reais de arquitetura, manipulação de dados e regras de negócio.
-
-Para te ajudar a construir uma base lógica brutal, dividi os 50 exercícios em 5 blocos estratégicos de Backend. Em vez de fazer 50 arquivos isolados, a minha dica de ouro é: crie um único repositório no GitHub chamado algo como backend-logic-challenges e organize-o em pacotes/módulos. Use Type Hinting, trate exceções, siga a PEP 8 e escreva testes unitários se puder. Isso sim vai fazer o olho do recrutador brilhar.
-
-Pegue o café e vamos ao trabalho!
 
 Bloco 1: Estruturas de Dados Puras e Algoritmos de Core Engine
 O objetivo aqui é mostrar que você entende o que acontece por baixo dos panos dos frameworks e sabe manipular dados sem depender de bibliotecas externas.
@@ -27,8 +22,12 @@ Sistemas de Permissões (Bitwise Masks): Crie um sistema de controle de acesso (
 
 Gerador e Validador de Cupom de Desconto com Hash Checksum: Escreva um algoritmo que gere códigos de cupom (ex: DESC10-X8Y2) onde os últimos caracteres são um algoritmo de verificação (checksum) dos primeiros, evitando fraudes de cupons inventados.
 
+
+
+
 Bloco 2: Regras de Negócio e Engenharia de Software Backend
 Exercícios que simulam o dia a dia de um desenvolvedor escrevendo as regras de sistemas corporativos.
+
 
 Cálculo de Juros Compostos e Amortização (Tabela SAC e Price): Crie um motor financeiro que receba o valor de um empréstimo, taxa de juros e prazo, retornando a tabela completa de parcelas, amortização, juros e saldo devedor.
 
@@ -50,8 +49,12 @@ Sistema de Pontuação de Fidelidade (Fidelidade/Milhas): Desenvolva a lógica q
 
 Gerenciador de Status de Pedido (State Pattern Manual): Crie o fluxo de um pedido: Aguardando Pagamento -> Pago -> Enviado -> Entregue. Impeça por código que um pedido mude de Aguardando Pagamento direto para Entregue.
 
+
+
+
 Bloco 3: Arquivos, Parsers e Persistência de Dados (Simulação de Bancos)
 Processar arquivos e armazenar informações é o core do backend. Mostre que você domina I/O (Input/Output).
+
 
 Parser Manual de CSV para Lista de Dicionários: Sem usar a biblioteca csv do Python, abra um arquivo .csv via código, trate quebras de linha, delimitadores (vírgula ou ponto e vírgula) e aspas, transformando-o em dados estruturados.
 
@@ -73,8 +76,12 @@ Validador de Schema de JSON: Escreva uma função que compare um JSON recebido c
 
 Rotacionador Automático de Arquivos de Log: Crie uma função de log que escreve mensagens em um arquivo app.log. Quando o arquivo atingir 1MB, o script deve renomeá-lo para app.1.log e abrir um novo app.log vazio.
 
+
+
+
 Bloco 4: Concorrência, Assincronismo e Redes (Simulações)
 O mercado exige que você saiba lidar com tarefas que rodam em paralelo ou esperas de rede.
+
 
 Simulador de Pooling de Conexões de Banco de Dados: Crie uma classe que gerencie um número limitado de conexões simuladas (ex: 5 conexões). Implemente métodos para "adquirir" uma conexão e "liberar" de volta para o pool. Se não houver conexões livres, lance uma exceção de timeout.
 
@@ -96,8 +103,12 @@ Validador de Cabeçalhos HTTP de Segurança: Crie uma função que receba um dic
 
 Processador Paralelo de Imagens (Mockado): Usando concurrent.futures, simule o processamento (redimensionamento/filtro) de uma lista de 100 imagens fictícias dividindo o trabalho entre múltiplos cores do processador para otimizar o tempo de execução.
 
+
+
+
 Bloco 5: Desafios Avançados de Arquitetura e Engenharia Reversa
 Se você resolver estes, você prova que pensa como um engenheiro de software pleno.
+
 
 Motor de Busca Textual Simples (Inverted Index): Dada uma coleção de frases/documentos textuais, construa um índice invertido. O usuário deve conseguir buscar por uma palavra e o sistema retornar instantaneamente quais documentos contêm essa palavra, ordenados por relevância (frequência).
 
@@ -119,7 +130,6 @@ Desfazedor de Operações (Undo/Redo System): Implemente o Command Pattern para 
 
 Sistema de Rotas e Matcher de URL (Mock Framework): Crie o core de um framework web (estilo Flask/Django). Você deve conseguir registrar rotas com parâmetros dinâmicos (ex: /usuarios/<int:id>/detalhes) e criar uma função que receba uma URL acessada e descubra qual função deve ser executada, extraindo o parâmetro id convertido para inteiro.
 
-💡 Dica extra de como apresentar isso no GitHub:
 Para cada desafio que resolver, estruture o código assim:
 
 Python
@@ -141,4 +151,3 @@ if __name__ == "__main__":
     # Sempre inclua casos de teste funcionais demonstrando o código rodando
     assert validate_cpf("111.222.333-44") is False
     print("Desafio 01: Todos os testes passaram!")
-Fazer commits claros seguindo o padrão de Conventional Commits (ex: feat(bloco-1): adiciona validador de cpf com checksum) vai consolidar de vez a imagem de que você é o profissional que o mercado procura. Boa sorte nos estudos e mande ver no código!
