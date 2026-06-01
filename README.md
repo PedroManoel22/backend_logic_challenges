@@ -18,7 +18,7 @@ Para garantir que o código atenda aos padrões exigidos pelo mercado de trabalh
 * **PEP 8 & Padrões Estéticos:** Código limpo, legível, com nomenclatura semântica de variáveis/funções e formatação profissional.
 * **Type Hinting Estrito:** Uso de tipagem estática nos argumentos e retornos de funções, garantindo segurança, documentação e fácil manutenção.
 * **Tratamento de Exceções Resiliente:** Tratamento robusto de erros e cenários de falha (*edge cases*), antecipando inputs inesperados.
-* **Estrutura de Pacotes Modular:** Organização limpa por pacotes e módulos Python, respeitando o princípio de responsabilidade única. Cada desafio possui sua própria **pasta**, dividida internamente entre as soluções `native.py` e `external.py`.
+* **Estrutura de Pacotes Modular:** Organização limpa por pacotes e módulos Python, respeitando o princípio de responsabilidade única. Cada desafio possui sua própria **pasta**, podendo ser dividida internamente entre as soluções `native.py` e `external.py`.
 
 ---
 
