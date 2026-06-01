@@ -2,25 +2,25 @@
 Bloco 1: Estruturas de Dados Puras e Algoritmos de Core Engine
 O objetivo aqui é mostrar que você entende o que acontece por baixo dos panos dos frameworks e sabe manipular dados sem depender de bibliotecas externas.
 
-Validador de CPF/CNPJ Profissional: Crie uma função que receba uma string, remova caracteres especiais, identifique se é CPF ou CNPJ e aplique o algoritmo de cálculo dos dígitos verificadores.
+01 Validador de CPF/CNPJ Profissional: Crie uma função que receba uma string, remova caracteres especiais, identifique se é CPF ou CNPJ e aplique o algoritmo de cálculo dos dígitos verificadores.
+ 
+02 Gerador de Payload de Pagamento (String de Pix Copia e Cola): Implemente a lógica para gerar a string EMV do Pix estático (padrão BCB), calculando o CRC16 (Cyclic Redundancy Check) no final do payload.
 
-Gerador de Payload de Pagamento (String de Pix Copia e Cola): Implemente a lógica para gerar a string EMV do Pix estático (padrão BCB), calculando o CRC16 (Cyclic Redundancy Check) no final do payload.
+03 Conversor de Notação Polonesa Inversa (RPN): Implemente uma calculadora baseada em pilha (Stack) que resolva expressões matemáticas em formato RPN (ex: ["2", "1", "+", "3", "*"] -> 9).
 
-Conversor de Notação Polonesa Inversa (RPN): Implemente uma calculadora baseada em pilha (Stack) que resolva expressões matemáticas em formato RPN (ex: ["2", "1", "+", "3", "*"] -> 9).
+04 Filtro Avançado de Logs com Busca Binária: Dado um arquivo de log textual gigante (mockado em memória), ordene-o por timestamp e implemente uma busca binária para encontrar eventos ocorridos em um intervalo exato de milissegundos.
 
-Filtro Avançado de Logs com Busca Binária: Dado um arquivo de log textual gigante (mockado em memória), ordene-o por timestamp e implemente uma busca binária para encontrar eventos ocorridos em um intervalo exato de milissegundos.
+05 Algoritmo de Rate Limiting (Token Bucket): Implemente em Python puro a lógica do algoritmo Token Bucket para controlar o limite de requisições por IP (ex: 5 requisições por minuto).
 
-Algoritmo de Rate Limiting (Token Bucket): Implemente em Python puro a lógica do algoritmo Token Bucket para controlar o limite de requisições por IP (ex: 5 requisições por minuto).
+06 Diferença entre JSONs (Deep Diff): Escreva uma função recursiva que receba dois dicionários Python aninhados e retorne exatamente quais chaves foram adicionadas, modificadas (com valor antigo e novo) ou removidas.
 
-Diferença entre JSONs (Deep Diff): Escreva uma função recursiva que receba dois dicionários Python aninhados e retorne exatamente quais chaves foram adicionadas, modificadas (com valor antigo e novo) ou removidas.
+07 Paginador de Resultados Manual: Crie uma classe utilitária que receba uma lista de dados, o número da página atual e o limite por página. Ela deve retornar o subconjunto de dados, o total de páginas, e se há uma página anterior/próxima.
 
-Paginador de Resultados Manual: Crie uma classe utilitária que receba uma lista de dados, o número da página atual e o limite por página. Ela deve retornar o subconjunto de dados, o total de páginas, e se há uma página anterior/próxima.
+08 Validador de Expressões Sintáticas (Parênteses/Chaves/Colchetes): Usando uma estrutura de dados de pilha, valide se uma string de código possui fechamento correto de símbolos: {[()]} é válido; {[(])} é inválido.
 
-Validador de Expressões Sintáticas (Parênteses/Chaves/Colchetes): Usando uma estrutura de dados de pilha, valide se uma string de código possui fechamento correto de símbolos: {[()]} é válido; {[(])} é inválido.
+09 Sistemas de Permissões (Bitwise Masks): Crie um sistema de controle de acesso (RBAC) usando operadores bitwise (&, |). Defina permissões como READ=1, WRITE=2, DELETE=4, ADMIN=8 e valide acessos do usuário.
 
-Sistemas de Permissões (Bitwise Masks): Crie um sistema de controle de acesso (RBAC) usando operadores bitwise (&, |). Defina permissões como READ=1, WRITE=2, DELETE=4, ADMIN=8 e valide acessos do usuário.
-
-Gerador e Validador de Cupom de Desconto com Hash Checksum: Escreva um algoritmo que gere códigos de cupom (ex: DESC10-X8Y2) onde os últimos caracteres são um algoritmo de verificação (checksum) dos primeiros, evitando fraudes de cupons inventados.
+10 Gerador e Validador de Cupom de Desconto com Hash Checksum: Escreva um algoritmo que gere códigos de cupom (ex: DESC10-X8Y2) onde os últimos caracteres são um algoritmo de verificação (checksum) dos primeiros, evitando fraudes de cupons inventados.
 
 
 
