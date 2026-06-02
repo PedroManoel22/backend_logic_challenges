@@ -1,0 +1,15 @@
+{"id": 13, "timestamp": "2026-06-02T08:50:18.269000", "level": "WARNING", "message": "User authentication successful"}
+{"id": 11, "timestamp": "2026-06-02T08:22:58.088000", "level": "CRITICAL", "message": "Disk usage reached 85%"}
+{"id": 1, "timestamp": "2026-06-02T08:17:24.017000", "level": "CRITICAL", "message": "User authentication successful"}
+{"id": 3, "timestamp": "2026-06-02T08:15:52.706000", "level": "WARNING", "message": "Disk usage reached 85%"}
+{"id": 2, "timestamp": "2026-06-02T08:10:54.713000", "level": "DEBUG", "message": "User authentication successful"}
+{"id": 7, "timestamp": "2026-06-02T08:50:05.521000", "level": "WARNING", "message": "Cache cleared for session token"}
+{"id": 14, "timestamp": "2026-06-02T08:29:09.206000", "level": "DEBUG", "message": "Inbound webhook received from gateway"}
+{"id": 9, "timestamp": "2026-06-02T08:46:56.325000", "level": "ERROR", "message": "Inbound webhook received from gateway"}
+{"id": 8, "timestamp": "2026-06-02T08:00:22.330000", "level": "WARNING", "message": "API request processed in 45ms"}
+{"id": 6, "timestamp": "2026-06-02T08:44:28.746000", "level": "ERROR", "message": "User authentication successful"}
+{"id": 4, "timestamp": "2026-06-02T08:46:41.918000", "level": "CRITICAL", "message": "Inbound webhook received from gateway"}
+{"id": 15, "timestamp": "2026-06-02T08:13:22.235000", "level": "CRITICAL", "message": "Cache cleared for session token"}
+{"id": 5, "timestamp": "2026-06-02T08:58:30.347000", "level": "WARNING", "message": "Cache cleared for session token"}
+{"id": 10, "timestamp": "2026-06-02T08:46:51.772000", "level": "WARNING", "message": "Inbound webhook received from gateway"}
+{"id": 12, "timestamp": "2026-06-02T08:33:51.830000", "level": "INFO", "message": "Failed to upload profile picture"}
