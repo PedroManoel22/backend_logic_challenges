@@ -21,3 +21,10 @@ with open(caminho_arquivo, "r", encoding="utf-8") as file:
             dado["timestamp"] = datetime.fromisoformat(dado["timestamp"])
 
             logs_para_o_desafio.append(dado)
+
+logs_para_o_desafio_ordenado = sorted(logs_para_o_desafio, key=lambda x: x["timestamp"])
+
+if __name__ == "__main__":
+    # Mostrando apenas os 5 primeiros logs
+    for i in range(5):
+        print(logs_para_o_desafio_ordenado[i])
