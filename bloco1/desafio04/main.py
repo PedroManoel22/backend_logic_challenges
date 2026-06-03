@@ -39,5 +39,5 @@ if __name__ == "__main__":
     print("\nBusca Binária:\n")
 
     # Busca binária
-    buscador = BuscaBinaria(logs_para_o_desafio_ordenado_id, 6)
+    buscador = BuscaBinaria(logs_para_o_desafio_ordenado_id, 8)
     print(buscador.buscar())
