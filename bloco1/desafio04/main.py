@@ -6,6 +6,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from busca_binaria import BuscaBinaria
+
 logs_para_o_desafio: list[dict[str, Any]] = []
 
 pasta_raiz = Path(__file__).parent
@@ -22,9 +24,20 @@ with open(caminho_arquivo, "r", encoding="utf-8") as file:
 
             logs_para_o_desafio.append(dado)
 
-logs_para_o_desafio_ordenado = sorted(logs_para_o_desafio, key=lambda x: x["timestamp"])
+logs_para_o_desafio_ordenado_timestamp = sorted(
+    logs_para_o_desafio, key=lambda x: x["timestamp"]
+)
+logs_para_o_desafio_ordenado_id = sorted(logs_para_o_desafio, key=lambda x: x["id"])
 
 if __name__ == "__main__":
     # Mostrando apenas os 5 primeiros logs
     for i in range(5):
-        print(logs_para_o_desafio_ordenado[i])
+        print(logs_para_o_desafio_ordenado_timestamp[i])
+
+    print()
+    print("-" * 50)
+    print("\nBusca Binária:\n")
+
+    # Busca binária
+    buscador = BuscaBinaria(logs_para_o_desafio_ordenado_id, 6)
+    print(buscador.buscar())
